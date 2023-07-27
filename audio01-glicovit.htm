@@ -1,0 +1,435 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=PT-BR style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;!DOCTYPE html&gt;</p>
+
+<p class=MsoNormal>&lt;html&gt;</p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>  &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>  &lt;title&gt;Áudio&lt;/title&gt;</p>
+
+<p class=MsoNormal>  &lt;link rel=&quot;stylesheet&quot;
+href=&quot;https://cdn.plyr.io/3.6.7/plyr.css&quot;&gt;</p>
+
+<p class=MsoNormal>  &lt;link rel=&quot;stylesheet&quot;
+href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css&quot;&gt;</p>
+
+<p class=MsoNormal>  &lt;style&gt;</p>
+
+<p class=MsoNormal>    @import
+url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap');</p>
+
+<p class=MsoNormal>      </p>
+
+<p class=MsoNormal>    body {</p>
+
+<p class=MsoNormal>      height: 100vh;</p>
+
+<p class=MsoNormal>      overflow: hidden;</p>
+
+<p class=MsoNormal>      margin: 0px;</p>
+
+<p class=MsoNormal>    }    </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .audio-container {</p>
+
+<p class=MsoNormal>      display: flex;</p>
+
+<p class=MsoNormal>      align-items: center;</p>
+
+<p class=MsoNormal>      justify-content: space-between;</p>
+
+<p class=MsoNormal>      font-family: 'Open Sans', sans-serif;</p>
+
+<p class=MsoNormal>      justify-content: flex-start;</p>
+
+<p class=MsoNormal>      cursor: pointer; /* Adicione o cursor pointer para
+indicar que é clicável */</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .audio-container img {</p>
+
+<p class=MsoNormal>      width: 50px;</p>
+
+<p class=MsoNormal>      height: 50px;</p>
+
+<p class=MsoNormal>      border-radius: 50%;</p>
+
+<p class=MsoNormal>      object-fit: cover;</p>
+
+<p class=MsoNormal>      padding-right: 8px;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .audio-container .microphone-icon {</p>
+
+<p class=MsoNormal>      position: relative;</p>
+
+<p class=MsoNormal>      margin-left: -67px;</p>
+
+<p class=MsoNormal>      margin-bottom: -25px;</p>
+
+<p class=MsoNormal>      font-size: 22px;</p>
+
+<p class=MsoNormal>      color: #4ad954;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .audio-container .microphone-icon.blue {</p>
+
+<p class=MsoNormal>      color: #3db8ee;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__control.plyr__tab-focus,</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__control:hover,</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__control[aria-expanded=false] {</p>
+
+<p class=MsoNormal>      background: rgba(0, 0, 0, 0);</p>
+
+<p class=MsoNormal>      background: var(--plyr-audio-control-background-hover,
+var(--plyr-color-main, var(--plyr-color-main, rgba(0, 0, 0, 0))));</p>
+
+<p class=MsoNormal>      color: rgba(0, 0, 0, 0);</p>
+
+<p class=MsoNormal>      color: var(--plyr-audio-control-color-hover, #797979)</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__controls {</p>
+
+<p class=MsoNormal>      background: rgba(0, 0, 0, 0);</p>
+
+<p class=MsoNormal>      background: var(--plyr-audio-controls-background,
+rgba(0, 0, 0, 0));</p>
+
+<p class=MsoNormal>      border-radius: inherit;</p>
+
+<p class=MsoNormal>      color: #4a5464;</p>
+
+<p class=MsoNormal>      color: var(--plyr-audio-control-color,#4a5464);</p>
+
+<p class=MsoNormal>      margin-left: 0px;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__control--overlaid
+.plyr__control__icon {</p>
+
+<p class=MsoNormal>      font-size: 33px;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr--full-ui input[type=range]::-webkit-slider-thumb {</p>
+
+<p class=MsoNormal>      -webkit-appearance: none;</p>
+
+<p class=MsoNormal>      border: 0;</p>
+
+<p class=MsoNormal>      border-radius: 100%;</p>
+
+<p class=MsoNormal>      box-shadow: 0 1px 1px rgba(35,40,47,.15),0 0 0 1px
+rgba(35,40,47,.2);</p>
+
+<p class=MsoNormal>      box-shadow: var(--plyr-range-thumb-shadow,0 1px 1px
+rgba(35,40,47,.15),0 0 0 1px rgba(35,40,47,.2));</p>
+
+<p class=MsoNormal>      height: 13px;</p>
+
+<p class=MsoNormal>      height: var(--plyr-range-thumb-height,13px);</p>
+
+<p class=MsoNormal>      margin-top: -4px;</p>
+
+<p class=MsoNormal>      margin-top:
+calc(var(--plyr-range-thumb-height,13px)/2*-1 -
+var(--plyr-range-track-height,5px)/2*-1);</p>
+
+<p class=MsoNormal>      position: relative;</p>
+
+<p class=MsoNormal>      -webkit-transition: all .2s ease;</p>
+
+<p class=MsoNormal>      transition: all .2s ease;</p>
+
+<p class=MsoNormal>      width: 13px;</p>
+
+<p class=MsoNormal>      width: var(--plyr-range-thumb-height,13px);</p>
+
+<p class=MsoNormal>      background: var(--range-thumb-background, #4ad954);</p>
+
+<p class=MsoNormal>    }  </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr--full-ui
+input[type=range].blue::-webkit-slider-thumb {</p>
+
+<p class=MsoNormal>      background: var(--range-thumb-background-active,
+#3db8ee);</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>  </p>
+
+<p class=MsoNormal>    .hide {</p>
+
+<p class=MsoNormal>      display: none;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr__controls
+.plyr__controls__item.plyr__progress__container:first-child,</p>
+
+<p class=MsoNormal>    .plyr__controls
+.plyr__controls__item.plyr__time+.plyr__time,</p>
+
+<p class=MsoNormal>    .plyr__controls
+.plyr__controls__item.plyr__time:first-child {</p>
+
+<p class=MsoNormal>      padding-left: 0;</p>
+
+<p class=MsoNormal>      display: block;</p>
+
+<p class=MsoNormal>      margin-left: 7.5px;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    .plyr__time+.plyr__time:before {</p>
+
+<p class=MsoNormal>      content: &quot;&quot;;</p>
+
+<p class=MsoNormal>      margin-right: var(--plyr-control-spacing);</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    /* Ocultar os controles de tempo */</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__controls
+.plyr__controls__item.plyr__time--current.hide,</p>
+
+<p class=MsoNormal>    .plyr--audio .plyr__controls
+.plyr__controls__item.plyr__time--duration.hide {</p>
+
+<p class=MsoNormal>      display: none;</p>
+
+<p class=MsoNormal>    }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;audio-container&quot; id=&quot;audioContainer&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Cole o link do Seu áudio Abaixo--&gt;</p>
+
+<p class=MsoNormal>    &lt;audio class=&quot;plyr&quot;
+src=&quot;https://s3.fr-par.scw.cloud/typebot/public/typebots/clkedmalu002wl70fjmogqjxo/blocks/god5tjpn64weyj55lk2twf4w?v=1690074320622&quot;&gt;&lt;/audio&gt;</p>
+
+<p class=MsoNormal>    &lt;!-- Cole o link da Sua imagem Abaixo--&gt;</p>
+
+<p class=MsoNormal>    &lt;img
+src=&quot;https://i.ibb.co/C8wTqKR/Screenshot-1.png&quot;
+alt=&quot;Imagem&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;microphone-icon&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;i class=&quot;fas
+fa-microphone&quot;&gt;&lt;/i&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>  </p>
+
+<p class=MsoNormal>  &lt;script
+src=&quot;https://cdn.plyr.io/3.6.7/plyr.js&quot;&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal>  &lt;script&gt;</p>
+
+<p class=MsoNormal>    document.addEventListener('DOMContentLoaded', function()
+{</p>
+
+<p class=MsoNormal>      const player = new Plyr('.plyr', {</p>
+
+<p class=MsoNormal>        controls: ['play', 'progress', 'current-time',
+'duration']</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      const audioElement = document.querySelector('.plyr');</p>
+
+<p class=MsoNormal>      const currentTimeElement =
+document.querySelector('.plyr__time--current');</p>
+
+<p class=MsoNormal>      const durationElement =
+document.querySelector('.plyr__time--duration');</p>
+
+<p class=MsoNormal>      const microphoneIcon =
+document.querySelector('.microphone-icon');</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      currentTimeElement.classList.add('hide'); // Adiciona
+a classe 'hide' ao iniciar</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      audioElement.addEventListener('play', function() {</p>
+
+<p class=MsoNormal>        currentTimeElement.classList.remove('hide');</p>
+
+<p class=MsoNormal>        durationElement.classList.add('hide');</p>
+
+<p class=MsoNormal>        microphoneIcon.classList.add('blue'); // Adiciona a
+classe 'blue' para alterar a cor do ícone</p>
+
+<p class=MsoNormal>        audioElement.classList.add('blue'); // Adiciona a
+classe 'blue' para alterar o background do controle deslizante</p>
+
+<p class=MsoNormal>       
+audioElement.style.setProperty('--range-thumb-background', '#3db8ee');</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      audioElement.addEventListener('pause', function() {</p>
+
+<p class=MsoNormal>        currentTimeElement.classList.add('hide');</p>
+
+<p class=MsoNormal>        durationElement.classList.remove('hide');</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      const audioContainer =
+document.getElementById('audioContainer');</p>
+
+<p class=MsoNormal>      audioContainer.addEventListener('click', function() {</p>
+
+<p class=MsoNormal>        const playButton =
+audioContainer.querySelector('.plyr__controls button[data-plyr=&quot;play&quot;]');</p>
+
+<p class=MsoNormal>        playButton.click();</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      const playPauseButton =
+document.getElementById('audioContainer').querySelector('.plyr__controls
+button[data-plyr=&quot;play&quot;]');</p>
+
+<p class=MsoNormal>      const audioBox = document.querySelector('.audio-box');</p>
+
+<p class=MsoNormal>      playPauseButton.addEventListener('click', function() {</p>
+
+<p class=MsoNormal>        const playButton =
+audioContainer.querySelector('.plyr__controls
+button[data-plyr=&quot;play&quot;]');</p>
+
+<p class=MsoNormal>        playButton.click();</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>      audioBox.addEventListener('click', function(event) {</p>
+
+<p class=MsoNormal>        event.stopPropagation(); </p>
+
+<p class=MsoNormal>        const playButton =
+audioContainer.querySelector('.plyr__controls
+button[data-plyr=&quot;play&quot;]');</p>
+
+<p class=MsoNormal>        playButton.click();</p>
+
+<p class=MsoNormal>      });</p>
+
+<p class=MsoNormal>    });</p>
+
+<p class=MsoNormal>  &lt;/script&gt;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
